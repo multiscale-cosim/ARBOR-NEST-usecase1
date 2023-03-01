@@ -16,5 +16,7 @@
   - `make install`
   - `pip3 install /home/vagrant/multiscale-cosim-repos/ARBOR-NEST-usecase1/arbor/`
 
+---
+--> usecase repository, all packages should be installed
 
---> usecase repository, all packages, nest and arbor should be installed and available as library in python
+--> nest and arbor should be available as library in python
