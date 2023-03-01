@@ -23,8 +23,8 @@
 ---
 ### Next steps / TODOs:
 #### Action Adapters
-  - Interscalehub: new managers for Arbor (see: https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/blob/main/Interscale_hub/manager_nest_to_tvb.py)
-  - Nest: new adapter / edit current one to fit this usecase
+  - Interscalehub (copied from TVB-Nest usecase): new managers for Arbor (see: https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/blob/main/Interscale_hub/manager_nest_to_tvb.py)
+  - Nest (copied from TVB-Nest usecase): new adapter / edit current one to fit this usecase
   - Arbor: new adapter 
 #### Configurations files
   - Actions, Parameters, Plans: https://github.com/multiscale-cosim/EBRAINS_WorkflowConfigurations/tree/23e05d2e425eafe4a6c9253325fbc3caf1fc56f8/usecase/local/
