@@ -1,6 +1,5 @@
 # ARBOR NEST Cosimulation usecase
-
-### In setup and testing state -- more information coming soon -- 
+### In setup and testing state
 ---
 #### Get repositories and install everything
   - Same process as here: https://github.com/multiscale-cosim/TVB-NEST-usecase1/blob/main/INSTALL.md
@@ -20,3 +19,10 @@
 --> usecase repository, all packages should be installed
 
 --> nest and arbor should be available as library in python
+
+---
+### Next steps / TODOs:
+#### Action Adapters
+  - Interscalehub: new managers for Arbor (see: https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/blob/main/Interscale_hub/manager_nest_to_tvb.py)
+  - Nest: new adapter / edit current one to fit this usecase
+  - Arbor: new adapter 
