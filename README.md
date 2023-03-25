@@ -1,24 +1,12 @@
 # ARBOR NEST Cosimulation usecase
-### In setup and testing state
+### WIP
 ---
 #### Get repositories and install everything
   - For VM it is the same process as for TVB-NEST usecase: https://github.com/multiscale-cosim/TVB-NEST-usecase1/blob/main/INSTALL.md
-  - With the bootstrap script : https://github.com/multiscale-cosim/TVB-NEST-usecase1/blob/hpc/installation/local/bootstrap.sh
-  --> add `git clone --recurse-submodules https://github.com/multiscale-cosim/ARBOR-NEST-usecase1.git` 
-  - TODO: update guide / include arbor
-#### (additional) Arbor installation:
-- create environment and cmake example
-  - `mkdir /home/vagrant/arbor_installed`
-  - ```cmake /home/vagrant/multiscale-cosim-repos/ARBOR-NEST-usecase1/arbor -DCMAKE_CXX_COMPILER=$CXX -DCMAKE_C_COMPILER=$CC -DARB_USE_BUNDLED_LIBS=ON -DARB_WITH_PYTHON=ON -DPYTHON_EXECUTABLE=`which python3` -DARB_WITH_MPI=ON```
-- install in C++ and Python: 
-  - `make -j 4` `make -j 4 test` `make -j 4 examples`
-  - `make install`
-  - `pip3 install /home/vagrant/multiscale-cosim-repos/ARBOR-NEST-usecase1/arbor/`
-
----
---> usecase repository, all packages should be installed
-
---> nest and arbor should be available as library in python
+      - updated `bootstrap.sh` and `Vagrantfile` in https://github.com/multiscale-cosim/ARBOR-NEST-usecase1/tree/main/installation/local
+      
+#### Troubleshooting:
+  
 
 ---
 ### Next steps / TODOs:
