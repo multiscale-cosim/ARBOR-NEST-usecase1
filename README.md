@@ -4,8 +4,22 @@
 #### Get repositories and install everything
   - For VM it is the same process as for TVB-NEST usecase: https://github.com/multiscale-cosim/TVB-NEST-usecase1/blob/main/INSTALL.md
       - updated `bootstrap.sh` and `Vagrantfile` in https://github.com/multiscale-cosim/ARBOR-NEST-usecase1/tree/main/installation/local
-      
+
+Short description:
+  - Have virtualbox and vagrant installed
+  - get the bootstrap.sh and Vagrantfile from the installation folder
+    - create a VM directory on the host-system with the bootrap.sh, Vagrantfile and a shared firectory
+  - run `vagrant up` to start the VM with ARBOR and NEST installed
+  - run `vagrant ssh` to log in to the VM
+  - test the installation:
+    - `cd multiscale-cosim`
+    - `source ARBOR-NEST-usecase1.source`
+    - `python3 ARBOR-NEST-usecase1/installation/tests/nest_test.py`
+    - `sh ARBOR-NEST-usecase1/installation/tests/arbor_test.sh`
+
 #### Troubleshooting:
+  - Error message during NEST installation
+  - failed ARBOR remote test
   
 
 ---
