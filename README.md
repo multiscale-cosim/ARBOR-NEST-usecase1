@@ -19,7 +19,6 @@ Short description:
 
 #### Troubleshooting:
   - Error message during NEST installation
-  - failed ARBOR remote test
   
 
 ---
