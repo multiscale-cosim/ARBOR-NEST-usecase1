@@ -270,50 +270,6 @@ class NESTAdapter:
                     self.__logger.exception("No data to plot")
 
         self.__logger.debug("post processing is done")
- 
-    def convert_to_dictionary(self, lines):
-        """
-        finds and extracts the local minimum step size information from
-        std_out stream, and converts it to a dictionary.
-        Parameters
-        ----------
-        lines : str
-            output received from the application
-        Returns
-        -------
-            int
-                return code indicating whether the string is converted into
-                dictionary
-        """
-        # NOTE as per protocol, the local minimum step size is received as a
-        # response of INIT command from SIMULATORs
-        # it is received via (stdin) PIPE as a string in the
-        # following format from a Simulator:
-
-        # {'PID': <pid>, 'LOCAL_MINIMUM_STEP_SIZE': <step_size>}
-
-        # STEP 1. find the starting index of response in the output received
-        # from Simulator
-
-        # As per protocol the response starts with PID, so look for that in
-        # output received
-        index = lines.find(COMMANDS.STEERING_COMMAND.name)
-
-        # STEP 2. covert response string to dictionary
-        try:
-            # the index points to PID, the curly bracket {'PID'... therefore
-            # starts at from index-2
-            self.__logger.debug("string response before converting to a"
-                                f"dictionary: {lines[index - 2:]}")
-            command_dictionary = ast.literal_eval(lines[index - 2:])
-            self.__logger.info(f"got responses: {command_dictionary}")
-            return Response.OK
-        except Exception:
-            # Could not convert string into dict
-            # log the exception with traceback and return with error
-            self.__logger.exception(f'could not convert {lines[index - 2:]} into'
-                                    f' the dictionary.')
-            return Response.ERROR
 
 
 if __name__ == "__main__":
