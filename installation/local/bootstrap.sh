@@ -97,7 +97,7 @@ cmake \
     -DARB_WITH_MPI=ON
 
 make -j 4 
-make -j 4 test 
+make -j 4 tests 
 make -j 4 examples
 make install
 pip3 install ${CO_SIM_ROOT_PATH}/ARBOR-NEST-usecase1/arbor/
