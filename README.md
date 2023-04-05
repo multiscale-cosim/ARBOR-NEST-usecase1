@@ -19,6 +19,8 @@ Short description:
 
 #### Troubleshooting:
   - Error message during NEST installation
+  - ARBOR `make tests` error
+  - Both installations work properly.
   
 
 ---
