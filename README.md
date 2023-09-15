@@ -16,23 +16,20 @@ Short description:
     - `source ARBOR-NEST-usecase1.source`
     - `python3 ARBOR-NEST-usecase1/installation/tests/nest_test.py`
     - `sh ARBOR-NEST-usecase1/installation/tests/arbor_test.sh`
-
-#### Troubleshooting:
-  - Error message during NEST installation
-  - ARBOR `make tests` error
-  - Both installations work properly.
-  
-
 ---
 ### Next steps / TODOs:
 #### Action Adapters
   - Interscalehub (copied from TVB-Nest usecase)
   - Nest (copied from TVB-Nest usecase): new adapter / edit current one to fit this usecase
-  - Arbor: new adapter 
+  - Arbor: new adapter
+#### Model and Parameters
+  - add models adn parameters for NEST and ARBOR in userland/modles which is then loaded by adpater(s) for configuration and simulation
+  - For ref
+    -- NEST adapter https://github.com/multiscale-cosim/Cosim-LFPy/blob/main/action_adapters/nest_simulator/nest_adapter.py
+    -- model at https://github.com/multiscale-cosim/Cosim-LFPy/tree/main/userland/models/Potjans
+    -- parameters at https://github.com/multiscale-cosim/Cosim-LFPy/tree/main/userland/parameters
 #### InterscaleHUB endpoints
-  - Manager class for setup and steering ( https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/blob/main/Interscale_hub/manager_nest_to_tvb.py)
-  - Communication class for actual data transport (https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/blob/main/Interscale_hub/communicator_nest_to_tvb.py)
+  - Add a Manager class for setup and steering at https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/tree/main/managers/usecase_specific
+  - Communication class for ARBOR at https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/tree/main/communicators
 #### Configurations files
-  - Actions, Parameters, Plans: https://github.com/multiscale-cosim/EBRAINS_WorkflowConfigurations/tree/23e05d2e425eafe4a6c9253325fbc3caf1fc56f8/usecase/local/
-  - Create new ones or extend current ones?
-  - for local and/or hpc systems ?
+  - see sample files in userland/configs i.e. https://github.com/multiscale-cosim/ARBOR-NEST-usecase1/tree/main/userland/configs
