@@ -102,25 +102,26 @@ make -j 4 tests
 make -j 4 examples
 make install
 pip3 install ${CO_SIM_ROOT_PATH}/ARBOR-NEST-usecase1/arbor/
+cd ..
 echo "ARBOR installed"
 
 # 
 # STEP 6 - NEST compilation
-# International Neuroinformatics Coordinating Facility (INCF) 
-# https://github.com/INCF/MUSIC
-# https://github.com/INCF/libneurosim
 git clone https://github.com/nest/nest-simulator.git
-cd nest-simulator
-# 9cb3cb: Merge pull request from VRGroupRWTH/feature/device_label (https://github.com/nest/nest-simulator/commit/9cb3cb2ec1cc76e278ed7e9a8850609fdb443cae) 
-# TODO: Needed until NEST v3.6 release to incorporate the aforementioned pull request.
-git checkout 9cb3cb
-cd ..
+
+# Un-commend the following to get specific 
+#cd nest-simulator
+#git checkout 9cb3cb
+#cd ..
+## E.g.: 9cb3cb: Merge pull request from VRGroupRWTH/feature/device_label (https://github.com/nest/nest-simulator/commit/9cb3cb2ec1cc76e278ed7e9a8850609fdb443cae) 
+## TODO: Needed until NEST v3.6 release to incorporate the aforementioned pull request.
 
 # Cython
 export PATH=${CO_SIM_SITE_PACKAGES}/bin:${PATH}
 export PYTHONPATH=${CO_SIM_SITE_PACKAGES}:${PYTHONPATH:+:$PYTHONPATH}
 
-mkdir -p ${CO_SIM_NEST} ${CO_SIM_NEST_BUILD}; cd ${CO_SIM_NEST_BUILD}
+mkdir -p ${CO_SIM_NEST} ${CO_SIM_NEST_BUILD} 
+cd ${CO_SIM_NEST_BUILD}
 
 cmake \
     -DCMAKE_INSTALL_PREFIX:PATH=${CO_SIM_NEST} \
