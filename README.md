@@ -31,5 +31,7 @@ Short description:
 #### InterscaleHUB endpoints
   - Add a Manager class for setup and steering at https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/tree/main/managers/usecase_specific
   - Communication class for ARBOR at https://github.com/multiscale-cosim/EBRAINS_InterscaleHUB/tree/main/communicators
+
 #### Configurations files
   - see sample files in userland/configs i.e. https://github.com/multiscale-cosim/ARBOR-NEST-usecase1/tree/main/userland/configs
+  
